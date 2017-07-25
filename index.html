@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>encode  &&  decode</title>
+</head>
+<body>
+	<input type="text" id="inp">
+	<input type="button" onclick="uc()" value="转换">
+	<input type="text" id="out">
+	<input type="button" value="清空" onclick="un()">
+	<script>
+	function uc() {
+		var mess = document.getElementById('inp').value
+		var arr = ''
+		for (var i = 0; i < mess.length; i++) {
+			arr += String(mess.charCodeAt(i)+100000).slice(1)
+		}
+		out.value = arr
+	}
+	function un() {
+		inp.value = ''
+		out.value = ''
+	}
+	</script>
+</body>
+</html>
